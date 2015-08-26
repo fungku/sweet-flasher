@@ -37,22 +37,6 @@ If you do know, please help me out here.
 
 ##### Laravel:
 
-With the helper funciton `flash()`:
-
-```php
-// Default info message
-flash("This is a default info message");
-
-// Other usages like:
-// flash->{$level}($message, $title, $confirm_button_text)
-
-flash()->success("This is a success message");
-
-flash()->error("Some error!");
-
-flash()->warning("Some Warning!", "Uh oh!");
-```
-
 Inject it
 
 ```php
@@ -69,6 +53,22 @@ class MyController extends Controller
         return response();
     }
 }
+```
+
+Or if you are a lazy piece of crap use the helper function `flash()`:
+
+```php
+// Default info message
+flash("This is a default info message");
+
+// Other usages like:
+// flash->{$level}($message, $title, $confirm_button_text)
+
+flash()->success("This is a success message");
+
+flash()->error("Some error!");
+
+flash()->warning("Some Warning!", "Uh oh!");
 ```
 
 ##### Symfony (maybe):
