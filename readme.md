@@ -40,15 +40,15 @@ If you do know, please help me out here.
 Inject it
 
 ```php
-use Fungku\SweetFlasher\Flash;
+use Fungku\SweetFlasher\FlashMessage;
 
 class MyController extends Controller
 {
-    public function store(Flash $flash)
+    public function store(FlashMessage $flashMessage)
     {
         // save ...
         
-        $flash->success("Nicely done");
+        $flashMessage->success("Nicely done");
         
         return response();
     }
@@ -74,12 +74,24 @@ flash()->warning("Some Warning!", "Uh oh!");
 ##### Symfony (maybe):
 
 ```php
- use Fungku\SweetFlasher\Flash;
- use Fungku\SweetFlasher\SessionFlasher\SymfonySessionFlasher as SessionFlasher;
- 
- $flash = new Flash(new SessionFlasher);
- 
- $flash->success("Good job! You succeeded!");
+use Fungku\SweetFlasher\FlashMessage;
+
+class MyController
+{
+    private $flash;
+    
+    public function __construct(FlashMessage $flash)
+    {
+        $this->flash = $flash;
+    }
+    
+    public function doAction()
+    {
+        // .. do action
+           
+        $this->flash->success('You did it!');
+    }
+}
 ```
 
 ##### Everybody else:

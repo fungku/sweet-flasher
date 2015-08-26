@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "classmap": [
-            "tests/FlashTest.php"
+            "tests/FlashMessageTest.php"
         ]
     }
 }

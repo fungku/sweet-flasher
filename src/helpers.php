@@ -11,7 +11,7 @@ if (class_exists('Illuminate\Container\Container') && !function_exists('flash'))
     function flash($title = null, $message = null)
     {
         $flash = \Illuminate\Container\Container::getInstance()
-            ->make(\Fungku\SweetFlasher\Flash::class);
+            ->make(\Fungku\SweetFlasher\FlashMessage::class);
 
         if (func_num_args() == 0) {
             return $flash;

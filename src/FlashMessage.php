@@ -4,7 +4,7 @@ namespace Fungku\SweetFlasher;
 
 use Fungku\SweetFlasher\SessionFlasher\SessionFlasher;
 
-class Flash
+class FlashMessage
 {
     /**
      * @var SessionFlasher

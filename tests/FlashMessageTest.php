@@ -1,10 +1,10 @@
 <?php
 
-use Fungku\SweetFlasher\Flash;
+use Fungku\SweetFlasher\FlashMessage;
 use Fungku\SweetFlasher\SessionFlasher\SessionFlasher;
 use Mockery as m;
 
-class FlashTest extends PHPUnit_Framework_TestCase
+class FlashMessageTest extends PHPUnit_Framework_TestCase
 {
     protected $session;
     protected $flash;
@@ -37,7 +37,7 @@ class FlashTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->session = m::mock(SessionFlasher::class);
-        $this->flash = new Flash($this->session);
+        $this->flash = new FlashMessage($this->session);
     }
 
     /** @test */
