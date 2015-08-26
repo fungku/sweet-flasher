@@ -88,4 +88,4 @@ You can do it.
 
 ##### *Notes*
 
-Forked from [laracasts/flash](https://github.com/laracasts/flash)
+This is nearly a fork of [laracasts/flash](https://github.com/laracasts/flash)
